@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="career-list.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Budget Calculator</h1>
+    </header>
+
+    <main>
+        <form>
+            <nav class="connected-steps">
+                <button id="stepOneButton" type="button" class="step">1</button>
+                <div id="connectorOne" class="connector"></div>
+                <button id="stepTwoButton" type="button" class="step">2</button>
+                <div id="connectorTwo" class="connector"></div>
+                <button id="stepThreeButton" type="button" class="step">3</button>
+            </nav>
+            <!--Step 1-->
+            <section id="stepOne" class="stepContainer">
+                <h2>Gross Income</h2>
+                <div class="row">
+                    <div class="column-left">
+                        <section class="monthly-gross">
+                            <h3>Enter Gross Monthly Income</h3>
+                            <div class="dollar-sign"><span>$</span><input type="number" min="0" step="500"
+                                    id="grossMonthly"></div>
+                        </section>
+                        <section>
+                            <h3>Or Choose a Career</h3>
+                            <div class="rounded-corners">
+                                <fieldset>
+                                    <div>
+                                        <h4>Job Title</h4>
+                                        <h4>Annual Income</h4>
+                                    </div>
+                                    <div id="careerList">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="column-right">
+                        <div class="piggy-bank">
+                            <p><span>Money Left</span><span><span>$</span><span id="moneyLeftOne">0.00</span></span></p>
+                        </div>
+                        <div class="buttons"><button class="next-button" type="button">Next</button></div>
+                    </div>
+                </div>
+            </section>
+            <!--Step 2-->
+            <section id="stepTwo" class="stepContainer">
+                <h2>Net Income</h2>
+                <div class="row">
+                    <div class="column-left">
+                        <section>
+                            <h3>Payroll Deductions</h3>
+                            <div class="payroll-deductions">
+                                <div>
+                                    <label for="federalTaxes">Federal Taxes</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="federalTaxes"></div>
+                                </div>
+                                <div>
+                                    <label for="stateTaxes">State Taxes</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="stateTaxes"></div>
+                                </div>
+                                <div>
+                                    <label for="socialSecurity">Social Security</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="socialSecurity"></div>
+                                </div>
+                                <div>
+                                    <label for="medicare">Medicare</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="medicare"></div>
+                                </div>
+                                <div>
+                                    <label for="stateDisability">State Disability</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="stateDisability"></div>
+                                </div>
+                                <div>
+                                    <label for="retirement">Retirement</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="retirement"></div>
+                                </div>
+                                <div>
+                                    <label for="medicalInsurance">Medical Insurance</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="medicalInsurance"></div>
+                                </div>
+                                <div>
+                                    <label for="otherTaxes">Other</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="otherTaxes"></div>
+                                </div>
+                                <p><span>Total Deductions</span><span><span>$</span><span
+                                            id="totalTaxes">XXXX</span></span></p>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Max. Monthly House Payment</h3>
+                            <p class="max-monthly"><span>$</span><span id="maxHousePayment">XXXX</span></p>
+                        </section>
+                    </div>
+
+                    <div class="column-right">
+                        <div class="piggy-bank">
+                            <p><span>Money Left</span><span><span>$</span><span id="moneyLeftTwo">0</span></span></p>
+                        </div>
+                        <div class="buttons">
+                            <button class="back-button" type="button">Back</button>
+                            <button class="next-button" type="button">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- step 3-->
+            <section id="stepThree" class="stepContainer">
+                <h2>Checkbook</h2>
+                <div class="row">
+                    <div class="column-left">
+                        <section>
+                            <h3>Expenses</h3>
+                            <div class="expenses">
+                                <div>
+                                    <label for="savings">Savings</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="savings"></div>
+                                </div>
+                                <div>
+                                    <label for="studentLoans">Loans</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="studentLoans"></div>
+                                </div>
+
+                                <div>
+                                    <label for="housingInsurance">Housing & Insurance</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="housingInsurance"></div>
+                                </div>
+
+                                <div>
+                                    <label for="utilities">Utilities</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="utilities"></div>
+                                </div>
+
+                                <div>
+                                    <label for="transportation">Transportation</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="transportation"></div>
+                                </div>
+
+                                <div>
+                                    <label for="food">Food</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="food"></div>
+                                </div>
+
+                                <div>
+                                    <label for="clothingSelfcare">Clothing/Self-Care</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="clothingSelfcare"></div>
+                                </div>
+
+                                <div>
+                                    <label for="media">Media</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="media"></div>
+                                </div>
+
+                                <div>
+                                    <label for="entertainment">Entertainment</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="entertainment"></div>
+                                </div>
+
+                                <div>
+                                    <label for="other">Other</label>
+                                    <div class="dollar-sign"><span>$</span><input type="number" min="0" step="50"
+                                            id="otherExpenses"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="column-right">
+                        <div>
+                            <div class="piggy-bank">
+                                <p><span>Money Left</span><span><span>$</span><span id="moneyLeftThree">0</span></span>
+                                </p>
+                            </div>
+                            <section class="chart">
+                                <h4><span>Total Expenses</span><span>$<span id="totalExpenses">0</span></span></h4>
+                                <canvas id="myChart" style="width:100%;"></canvas>
+                                <script src="app.js"></script>
+                            </section>
+                        </div>
+                        <div class="buttons"><button class="back-button" type="button">Back</button></div>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </main>
+
+</body>
+
+</html>

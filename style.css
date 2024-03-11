@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+input,
+span,
+label {
+  color: #3C3C3C;
+}
+
+h1 {
+  color: #0A5BA8;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+form {
+  width: 1050px;
+  margin: auto;
+  max-width: 90%;
+}
+
+/* code from https://codepen.io/bondartrq/pen/QOKxGR, styles step circles with connectors between them (ends at .connector)*/
+.connected-steps {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+.step {
+  color: white;
+  background-color: #448FCD;
+  border-radius: 65px;
+  border: 0;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.connector {
+  flex-grow: 1;
+  width: 10px;
+  display: block;
+  height: 10px;
+  background-color: #448FCD;
+}
+
+.completed-step {
+  background-color: #0A5BA8;
+}
+
+.stepContainer {
+  background-color: #E7F2FB;
+  height: 700px;
+}
+
+h2 {
+  text-align: center;
+  color: #0A5BA8;
+  font-size: 48px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 5%;
+  height: 600px;
+}
+
+.column-left {
+  width: 60%;
+}
+
+h3 {
+  color: #0A5BA8;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.dollar-sign {
+  position: relative;
+}
+
+.dollar-sign span {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  font-size: 24px;
+}
+
+.dollar-sign input {
+  text-indent: 17.5px;
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.monthly-gross {
+  margin-bottom: 30px;
+}
+
+input {
+  font-size: 24px;
+  border: 0;
+}
+
+.rounded-corners {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  height: 455px;
+  width: 505px;
+}
+
+fieldset {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: white;
+  border: 0;
+  border-radius: 10px;
+  height: 455px;
+  width: 505px;
+  overflow-y: scroll;
+  scrollbar-color: #E7F2FB white;
+}
+
+h4 {
+  color: #448FCD;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+fieldset>div:first-of-type {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 20px;
+  margin-top: 5px;
+}
+
+fieldset>div:not(fieldset > div:first-of-type) {
+  margin: 0 20px;
+  width: 100%;
+}
+
+fieldset>div:not(fieldset > div:first-of-type) label {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 80.5%;
+}
+
+
+fieldset>div:not(fieldset > div:first-of-type) label span:nth-of-type(1) {
+  font-size: 20px;
+}
+
+fieldset>div:not(fieldset > div:first-of-type) label span:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+  accent-color: #448FCD;
+}
+
+/* step 2 specific */
+.payroll-deductions {
+  background-color: white;
+  border-radius: 10px;
+  height: 410px;
+  width: 440px;
+  margin-bottom: 30px;
+}
+
+.payroll-deductions>div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 5px 50px;
+  padding-left: 25px;
+}
+
+.payroll-deductions>div:first-of-type {
+  padding-top: 15px;
+}
+
+.payroll-deductions>div label {
+  font-size: 24px;
+}
+
+.payroll-deductions>div input {
+  font-size: 24px;
+  border: 2px solid #3C3C3C;
+  border-radius: 5px;
+  height: 32px;
+  width: 100px;
+}
+
+.payroll-deductions>div .dollar-sign span {
+  top: 2px;
+}
+
+.payroll-deductions p {
+  padding: 20px 50px;
+  padding-left: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.payroll-deductions p span {
+  font-weight: 500;
+}
+
+.max-monthly {
+  background-color: white;
+  width: 440px;
+  height: 75px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.max-monthly span {
+  font-weight: 500;
+}
+
+/* Step 3 Specific */
+.expenses {
+  background-color: white;
+  border-radius: 10px;
+  height: 475px;
+  width: 440px;
+}
+
+.expenses>div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 5px 50px;
+  padding-left: 25px;
+}
+
+.expenses>div:first-of-type {
+  padding-top: 15px;
+}
+
+.expenses>div label {
+  font-size: 24px;
+  position: relative;
+}
+
+.expenses>div label::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: -17px;
+  top: 6px;
+}
+
+label[for="savings"]::before {
+  background-color: #76E6FF;
+}
+
+label[for="studentLoans"]::before {
+  background-color: #FF76C0;
+}
+
+label[for="housingInsurance"]::before {
+  background-color: #9BAB81;
+}
+
+label[for="utilities"]::before {
+  background-color: #370982;
+}
+
+label[for="transportation"]::before {
+  background-color: #FF5F5F;
+}
+
+label[for="food"]::before {
+  background-color: #C2FF5F;
+}
+
+label[for="clothingSelfcare"]::before {
+  background-color: #294E95;
+}
+
+label[for="media"]::before {
+  background-color: #2A0510;
+}
+
+label[for="entertainment"]::before {
+  background-color: #FFC0D3;
+}
+
+label[for="other"]::before {
+  background-color: #2A75AB;
+}
+
+.expenses>div input {
+  font-size: 24px;
+  border: 2px solid #3C3C3C;
+  border-radius: 5px;
+  height: 32px;
+  width: 100px;
+}
+
+.expenses>div .dollar-sign span {
+  top: 2px;
+}
+
+
+.column-right {
+  width: 40%;
+  position: relative;
+}
+
+.piggy-bank {
+  width: 65%;
+  margin: auto;
+  background-image: url(piggy-bank.png);
+  background-size: cover;
+  background-position-y: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piggy-bank p {
+  font-size: 24px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+.piggy-bank span {
+  font-weight: 500;
+}
+
+.buttons {
+  position: absolute;
+  top: 550px;
+  left: 100px;
+}
+
+#stepOne .buttons {
+  left: 229px;
+}
+
+#stepThree .buttons {
+  left: 229px;
+}
+
+.next-button {
+  background-color: #0A5BA8;
+  color: white;
+  width: 125px;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.next-button:hover {
+  background-color: #094b88;
+}
+
+.back-button {
+  background-color: #448FCD;
+  color: white;
+  width: 125px;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.back-button:hover {
+  background-color: #346f9f;
+}
+
+.chart h4 {
+  font-size: 24px;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.chart h4>span {
+  width: 100%;
+}
+
+.chart h4 span {
+  font-weight: 500;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+@media only screen and (max-width:640px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  form {
+    width: 97%;
+  }
+
+  .connected-steps {
+    width: 97%;
+  }
+
+  .step {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .connector {
+    height: 8px;
+  }
+
+  #stepOne {
+    height: 770px;
+  }
+
+  #stepTwo {
+    height: 800px;
+  }
+
+  #stepThree {
+    height: 960px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .row {
+    flex-flow: column nowrap;
+    margin: 0%;
+  }
+
+  .column-left {
+    width: 100%;
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  input {
+    font-size: 17px;
+  }
+
+  .dollar-sign span {
+    font-size: 17px;
+  }
+
+  .dollar-sign input {
+    text-indent: 15px;
+    width: 210px;
+    height: 24.5px;
+  }
+
+  .rounded-corners {
+    height: 318px;
+    width: 90%;
+  }
+
+  fieldset {
+    height: 318px;
+    width: 99%;
+  }
+
+  h4 {
+    font-size: 17px;
+  }
+
+  fieldset>div:not(fieldset > div:first-of-type) label span:nth-of-type(1) {
+    font-size: 17px;
+  }
+
+  fieldset>div:not(fieldset > div:first-of-type) label span:nth-of-type(2) {
+    font-size: 17px;
+  }
+
+  /* step 2 specific */
+  .payroll-deductions {
+    height: auto;
+    width: 90%;
+  }
+
+  .payroll-deductions>div label {
+    font-size: 17px;
+  }
+
+  .payroll-deductions>div input {
+    font-size: 17px;
+    height: 22px;
+    width: 80px;
+  }
+
+  .payroll-deductions>div .dollar-sign span {
+    top: 1px;
+  }
+
+  .payroll-deductions>div .dollar-sign input {
+    text-indent: 12px;
+  }
+
+  .payroll-deductions p {
+    font-size: 17px;
+  }
+
+  .max-monthly {
+    width: 90%;
+    height: 52.5px;
+    font-size: 17px;
+  }
+
+  /* Step 3 Specific */
+  .expenses {
+    height: auto;
+    width: 90%;
+  }
+
+  .expenses>div label {
+    font-size: 17px;
+  }
+
+  .expenses>div label::before {
+    width: 10px;
+    height: 10px;
+    left: -13px;
+    top: 4.5px;
+  }
+
+  .expenses>div input {
+    font-size: 17px;
+    height: 22px;
+    width: 85px;
+  }
+
+  .expenses>div .dollar-sign span {
+    top: 1px;
+  }
+
+  .expenses>div .dollar-sign input {
+    text-indent: 12px;
+  }
+
+  .column-right {
+    width: 100%;
+  }
+
+  .piggy-bank {
+    width: 65%;
+  }
+
+  .piggy-bank p {
+    font-size: 17px;
+  }
+
+  .buttons {
+    position: absolute;
+    top: 200px;
+    left: 135px;
+  }
+
+  #stepOne .buttons {
+    left: 225px;
+  }
+
+  #stepThree .buttons {
+    top: 470px;
+    left: 225px;
+  }
+
+  .next-button {
+    width: 87.5px;
+    height: 28px;
+    font-size: 17px;
+  }
+
+  .back-button {
+    width: 87.5px;
+    height: 28px;
+    font-size: 17px;
+  }
+
+  .chart h4 {
+    font-size: 17px;
+    margin-top: 20px;
+  }
+}
