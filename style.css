@@ -192,6 +192,7 @@ input[type="radio"] {
   height: 410px;
   width: 440px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .payroll-deductions>div {
