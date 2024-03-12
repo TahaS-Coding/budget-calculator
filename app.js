@@ -178,6 +178,9 @@ document.addEventListener('DOMContentLoaded', function(){
         expenses.entertainment.value = Number((netIncome * 0.05).toFixed(2));
         expenses.other.value = 0;
         totalExpenses.innerText = deductingExpenses();
+        if (Number(moneyLeftThree.innerText) <= 0){
+            moneyLeftThree.innerText = 0;
+        }
     }
 
     function deductingExpenses(){

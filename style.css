@@ -362,6 +362,8 @@ label[for="other"]::before {
   flex-flow: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+  max-width: 65%;
 }
 
 .piggy-bank span {
@@ -415,6 +417,7 @@ label[for="other"]::before {
   display: flex;
   flex-flow: row wrap;
   text-align: center;
+  overflow: hidden;
 }
 
 .chart h4>span {
@@ -605,11 +608,12 @@ label[for="other"]::before {
   }
 
   #stepOne .buttons {
+    top: 205px;
     left: 225px;
   }
 
   #stepThree .buttons {
-    top: 470px;
+    top: 445px;
     left: 225px;
   }
 
